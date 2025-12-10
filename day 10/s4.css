@@ -1,0 +1,21 @@
+row{
+        color: black;
+        background-color: burlywood;
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+    }
+h1{
+    background-color: rgb(221, 106, 106); 
+    color: azure;
+    text-align: center;
+}   
+p{
+    background-color: bisque;
+    color: rgb(243, 4, 135); 
+    font-size: larger;
+}
+h2{
+    color: rgb(244, 64, 10);
+    text-align: center;
+}
