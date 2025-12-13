@@ -1,0 +1,47 @@
+.text1{
+    display: block;
+    background-color: aquamarine;
+    width: 200px;
+    height: 50px;
+    margin: 50px;
+    padding: 20px;
+}
+.text2{
+    display: inline;
+    background-color: blueviolet;
+    margin: 20px;
+    padding: 10px;
+}
+.text3{
+    display: inline-block;
+    background-color: bisque;
+    width: 200px;
+    height: 50px;
+    margin: 50px;
+    padding: 20px;
+}
+.text{
+    display: none;
+    background-color: crimson;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.test{
+    display: block;
+    background-color: rgb(242, 17, 129);
+    height: 100px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.inline{
+    display: inline;
+    background-color: blueviolet;
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+    padding: 10px;    
+}
