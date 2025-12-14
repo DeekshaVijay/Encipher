@@ -1,0 +1,71 @@
+*{
+    margin: 10px;
+    padding: 5px;
+}
+.box{
+    border: 2px solid;
+    width: 300px;
+    height: 100px;
+    text-align: justify;
+    font-size: 35px;
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+}
+.div{
+    display: flex;
+    border-top: 20px solid;
+    border-bottom: 20px solid;
+}
+.h{
+    text-align: center;
+    font-size: 100px;
+    width: 100%;
+    font-family: "Style Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.para{
+    font-size: 100px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin: 0%;
+    text-align: center;
+}
+.para1{
+    font-size: 65px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0%;
+}
+.div2{
+    border-bottom: 8px solid;
+}
+.test{
+    display: flex;
+    gap: 2px;
+    align-items: flex-start;
+    margin: 0%;
+}
+.text{
+    text-align: justify;
+    width: 35%;
+}
+.text2{
+    border: 8px solid;
+    background-color: black;
+    color: antiquewhite;
+    display: flex;
+    gap: 20px;
+}
+
+.tag{
+    font-size: 50px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 5px;
+    width: 35%;
+}
