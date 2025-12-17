@@ -1,0 +1,58 @@
+.body{
+    background-color: aliceblue;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+.div{
+    border: 3px solid black;
+}
+.t1{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(2, 100, 202);
+    color: white;
+    margin: 0%;
+}
+.p{
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0%;
+}
+.block1{
+    width:93%;
+    height:350px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 15px;
+}
+.p1{
+    font-weight: 800;
+    font-size: x-large;
+}
+
+.block2{
+    width:93%;
+    height:180px;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 15px;    
+}
+.bottom{
+    width: 100%;
+    height: 30%;
+    background-color: rgba(2, 100, 202);
+    color: white;
+}
+.last{
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0%;
+}

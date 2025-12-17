@@ -1,0 +1,123 @@
+.body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgb(35, 145, 242);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.div{
+    width:400px;
+    height: 630px;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+}
+.p{
+    background: rgba(3, 114, 255);
+    color:white;
+    text-align:center;
+    padding:18px 10px;
+    font-size:50px;
+    font-weight:800;
+    text-transform: uppercase;
+}
+.p1{
+    display: flex;
+    border: 2px solid rgb(35, 145, 242);
+    background-color:rgb(35, 145, 242) ;
+    border-radius: 15px 15px 0px 15px;
+    color: white;
+    font-size: larger;
+    width: 180px;
+    padding: 10px 14px;
+    margin: 10px;
+    margin-left: 170px;
+}
+.text{
+    margin: 0%;
+    font-size: medium;
+}
+.p2{
+    border: 2px solid rgba(241, 241, 241);
+    border-radius: 15px 15px 15px 0px;
+    width: 55px;
+    padding: 10px 14px;
+    margin: 10px;
+    font-size: larger;
+    background-color: rgba(241, 241, 241);
+    margin-left: 20px;
+
+}
+.p3{
+    display: flex;
+    border: 2px solid rgb(35, 145, 242);
+    background-color:rgb(35, 145, 242) ;
+    border-radius: 15px 15px 0px 15px;
+    color: white;
+    font-size: larger;
+    width: 100px;
+    padding: 10px 14px;
+    margin: 10px;
+    margin-left: 250px;
+}
+.p4{
+    border: 2px solid rgba(241, 241, 241);
+    border-radius: 15px 15px 15px 0px;
+    width: 130px;
+    padding: 10px 14px;
+    margin: 10px;
+    font-size: larger;
+    background-color: rgba(241, 241, 241);
+    margin-left: 20px;
+}
+.p5{
+    display: flex;
+    border: 2px solid rgb(35, 145, 242);
+    background-color:rgb(35, 145, 242) ;
+    border-radius: 15px 15px 0px 15px;
+    color: white;
+    font-size: larger;
+    width: 110px;
+    padding: 10px 14px;
+    margin: 10px;
+    margin-left: 240px;
+}
+.p6{
+    border: 2px solid rgba(241, 241, 241);
+    border-radius: 15px 15px 15px 0px;
+    width: 65px;
+    padding: 10px 14px;
+    margin: 10px;
+    font-size: larger;
+    background-color: rgba(241, 241, 241);
+    margin-left: 20px;
+}
+.bottom{
+    border: 2px solid  rgba(241, 241, 241);
+    background-color:  rgba(241, 241, 241);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.last{
+    border: 1px solid grey;
+    background-color: white;
+    color: grey;
+    border-radius: 30px;
+    font-size: 25px;
+    width: 250px;
+    height: 40px;
+    padding-left: 20px;
+}
+.last1{
+    border: 2px solid rgb(35, 145, 242);
+    background-color: rgb(35, 145, 242);
+    border-radius: 30px;
+    color: white;
+    font-size: 25px;
+    width: 70px;
+    text-align: center;
+}
