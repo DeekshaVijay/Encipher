@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 50px 50px;
+            padding: 20px 20px;
+            border: 2px solid black;
+        }
+        h1{
+            text-align: center;
+            text-transform:uppercase ;
+            text-decoration: underline;
+        }
+        .div{
+            border: 2px solid black;
+            font-size: 25px;
+            text-transform: uppercase;
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin-left: 700px;
+        }
+        .div:hover{
+            background-color: rgb(241, 76, 222);
+        }
+        a{
+            text-decoration: none;
+            font-size: 25px;
+            border: 2px solid transparent;
+            background-color: blue;
+            color: black;
+            margin-left: 650px;
+            text-transform: uppercase;
+        }
+        a:link{
+            color: rgb(71, 237, 196);
+        }
+        a:hover{
+            background-color: rgb(250, 165, 131);
+        }
+        a:active{
+            color:red;
+        }
+        a:visited{
+            color:antiquewhite;
+        }
+        p{
+            font-size: 25px;
+        }
+        .p1::first-line{
+            color: rgb(231, 60, 2);
+        }
+        .firstletter::first-letter{
+            color: rgb(247, 5, 5);
+            font-size: 30px;
+        }
+        h2{
+            text-decoration: underline;
+        }
+        .before::before{
+            content:"Name:😍";
+            font-weight: bold;
+            color: black;
+        }
+        .after::after{
+            content: "-An aspiring Full-stack Developer";
+            font-weight: bold;
+        }
+        ::marker{
+            color: rgb(245, 2, 237);
+            font-size: 30px;
+        }
+        .li{
+            font-size: 30px;
+        }
+        .selection::selection{
+            color: aqua;
+            background-color: blue;
+        }
+        .backdrop::backdrop{
+            color: cyan;
+        }
+        .multiple::first-letter{
+            color: rgb(255, 8, 8);
+            font-size: 50px;
+        }
+        .multiple::after{
+            content: "The End";
+            color: red;
+            font-size: 50px;
+        }
+        img{
+            margin-top: 50px;
+            margin-left: 520px;
+            opacity:0.2;
+            border: 2px solid black;
+        }
+        img:hover{
+            opacity: 1.5;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!--Pseudo Class-->
+    <h1>Pseudo Classes</h1>
+    <a href="http://127.0.0.1:5500/login.html" class="div">Login Here</a>
+    <div>
+        <h1>Tutorial for CSS</h1>
+        <a href="https://www.w3schools.com/css/default.asp" target="_blank">Link for resources</a>
+    </div><br>
+    <hr>
+
+    <!--Pseudo Element-->
+    <h1>Pseudo Elements</h1>
+    <h2>First line</h2>
+    <div>
+        <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Dolore blanditiis mollitia quos neque tempore, maiores reiciendis perferendis asperiores soluta! 
+             Nisi sit doloribus dignissimos! Quidem placeat autem quasi provident dolorem odio?</p>
+    </div>
+
+    <h2>First Letter</h2>
+    <p class="firstletter">Deeksha</p>
+
+    <h2>Before</h2>
+    <p class="before">DeekshaVijay</p>
+
+    <h2>After</h2>
+    <p class="after">Deeksha</p>
+
+    <h2>Marker</h2>
+    <h3>Unordered List</h3>
+    <ul>
+        <li class="li">First-Letter</li>
+        <li class="li">First-Line</li>
+        <li class="li">Before</li>
+        <li class="li">After</li>
+        <li class="li">Marker</li>
+    </ul>
+    <h3>Ordered List</h3>
+    <ol>
+        <li class="li">One</li>
+        <li class="li">Two</li>
+        <li class="li">Three</li>
+        <li class="li">Four</li>
+        <li class="li">Five</li>
+    </ol>
+
+    <h2>Selection</h2>
+    <p class="selection">This is a selection statement</p>
+
+    <h2>Multiple Pseudo Selector</h2>
+    <p class="multiple">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi possimus, provident iure, et deleniti iusto, qui asperiores numquam facilis a dicta. Perferendis, laborum voluptatum. Quibusdam saepe eius repudiandae esse sequi.
+    </p><hr><br>
+
+    <!--Opacity-->
+    <h1>Opacity</h1>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTcT0QGetG2uzAvnYBjODTUeGzqZjpcfsUUQ&s" width="500px" height="300px">
+
+
+
+
+</body>
+</html>

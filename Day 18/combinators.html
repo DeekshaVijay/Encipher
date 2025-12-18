@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 50px 50px;
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+        .div p{
+            background-color: black;
+            color: white;
+        }
+        .div1>p{
+            background-color: rgb(228, 10, 10);
+            color: white;
+        }
+        .div2+p{
+            background-color: rgb(16, 73, 123);
+            color: #fff;
+        }
+        .div3~p{
+            background-color: rgb(9, 239, 239);
+            color: black;       
+        }
+    </style>
+</head>
+<body>
+    <!--Descendant-->
+    <h3>Descendant</h3>
+    <div class="div">
+        <p>This is a line 1</p>
+        <section>
+            <p>This is a line 2</p>
+        </section>
+        <p>Hello</p>
+    </div>
+    <hr>
+    <!--Child combinator-->
+    <h3>Child combinator</h3>
+    <div class="div1">
+        <p>This is a line</p>
+        <section>
+            <p>This is a line 1</p>
+        </section>
+        <p>Hello</p>
+    </div>
+    <hr>
+    <!--Next sibling combinator-->
+    <h3>Next sibling combinator</h3>
+    <div class="div2">
+        <p>Hello 1</p>
+        <p>Hello 2</p>
+        <section>
+            <p>Hello 3</p>
+        </section>
+    </div>
+    <p>Hello 4</p>
+    <p>Hello 5</p>
+    <hr>
+
+    <!--Subsequent sibling combinator-->
+    <h3>Subsequent sibling combinator</h3>
+    <div class="div3">
+        <p>Hii</p>
+    </div>
+    <p>Hello</p>
+    <p>Helloo</p>
+    <p>Helloo...</p>
+    <p>Hellooo!!!</p>
+</body>
+</html>
