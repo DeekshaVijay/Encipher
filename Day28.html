@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //User Greeting 
+        let name = prompt("Enter your name");
+        function welcome(name){
+            alert("Welcome"+" "+name+"!!")
+        }
+        welcome(name);
+
+       // Even or Odd Checker
+        let num = prompt("Enter a number")
+        function oddeven(i){
+            if(i%2==0){
+                alert("It's Even")
+            }
+            else{
+                alert("It's Odd")
+            }
+        }
+        oddeven(num)
+
+
+        //Simple Calculator
+        let num1 = Number(prompt("Enter a num1"))
+        let num2 = Number(prompt("Enter a num2"))
+        let op = prompt("Enter a operator")
+        switch (op) {
+            case "+":
+                alert(num1+num2);
+                break;
+            case "-":
+                alert(num1 - num2);
+                break;
+            case "*":
+                alert(num1 * num2);
+                break;
+            case "/":
+                alert(num1 / num2);
+                break;
+            default:
+                alert("Invalid");
+                break;
+        }
+
+
+        //Age eligibility checker
+        let age = Number(prompt("Enter your age"))
+        if(age>=18){
+            alert("Eligible to vote")
+        }
+        else{
+            alert("Not Eligible")
+        }
+
+
+        //Number table generator
+        let num = Number(prompt("Enter a number"))
+        for(let i = 1;i<=10;i++){
+            console.log(i+"x"+num+"="+(i*num))
+        }
+
+
+        //sum of Numbers
+        let n = Number(prompt("Enter a number"))
+        let sum = 0
+        for(let i = 1;i<=n;i++){
+            sum+=i; 
+        }
+        alert(sum)
+
+
+        //Password Validator
+        let password = prompt("Enter a password")
+        let len = password.length
+        if(len>=10){
+            alert("Valid");
+        }
+        else{
+            alert("Invalid");
+        }
+
+
+
+        //Grade claculator
+        let mark = prompt("Enter the mark")
+        if(mark>=85 && mark<=100){
+            alert("A")
+        }
+        else if(mark>=70 && mark<85){
+            alert("B")
+        }
+        else if(mark>=50 && mark<70){
+            alert("C")
+        }
+        else if(mark>100){
+            alert("Limit exceeded")
+        }
+        else{
+            alert("Fail")
+        }
+
+
+        //Largest Numbers
+        let a = Number(prompt("Enter a number1"))
+        let b = Number(prompt("Enter a number2"))
+        let c = Number(prompt("Enter a number3"))
+        if(a>=b && a>=c){
+            alert(a)
+        }
+        else if(b>=a && b>=c){
+            alert(b)
+        }
+        else{
+            alert(c)
+        }
+
+       // Login system
+        const dname = "Deeksha"
+        const dpassword = "deeksha@11"
+
+        let username = prompt("Enter Username")
+        let password = prompt("Enter Password")
+        if(dname==username && dpassword==password){
+            alert("Success")
+        }
+        else{
+            alert("Error")
+        }
+
+
+        //Count even numbers
+        let limit = Number(prompt("Enter the limit"))
+        let count = 0;
+        for(let i = 1;i<=limit;i++){
+            if(i%2==0){
+                count++;
+            }
+        }
+        alert(count)
+
+
+        //Reverse a number
+        let num = Number(prompt("Enter a number"))
+        let rev = 0;
+        function reverse(r) {
+            while (r != 0) {
+                let y = r % 10;
+                rev = (rev * 10) + y;
+                r = Math.floor(r / 10);
+            }
+            return rev;
+        }
+        let r = reverse(num);
+        alert(r);
+
+        //Simple interest
+        let p = Number(prompt("Enter the pa"))
+        let r = Number(prompt("Enter the ri"))
+        let t = Number(prompt("Enter the y"))
+        function simple(p, t, r) {
+            let si = (p * t * r) / 100;
+            return si
+        }
+        let s = simple(p, t, r)
+        console.log(s)
+
+
+       // Number guessing game
+        const num = 11;
+        let y = Number(prompt("Enter a number"))
+        function find(num, y) {
+            if (y > num) {
+                alert("Too High")
+                y = Number(prompt("Enter a number"))
+                find(num, y)
+            }
+            else if (y < num) {
+                alert("Too Low")
+                y = Number(prompt("Enter a number"))
+                find(num, y)
+            }
+            else {
+                alert("Number has Find")
+            }
+        }
+        let a = find(num, y)
+
+
+        //Prime Number
+        let num = Number(prompt("Enter the number"))
+        let c = 0;
+        for (let i = 2; i < num; i++) {
+            if (num % i == 0) {
+                c++;
+                break;
+            }
+        }
+        if (c != 0) {
+            alert("Not a Prime Number")
+        }
+        else {
+            alert("Prime Number")
+        }
+
+        //Factorial
+        let num = Number(prompt("Enter the number"))
+
+        function factorial(num) {
+            let fact = 1
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+        let f = factorial(num);
+        alert(f);
+
+        //Digit count
+        let n = Number(prompt("Enter a number"))
+        let c = 0;
+        while(n!=0){
+            n=Math.floor(n/10);
+            c++;
+        }
+        alert(c);
+
+        //Menu Based Program
+        let menu = prompt("Add Sub Mul")
+        let a = Number(prompt("Enter a num1"))
+        let b = Number(prompt("Enter a num2"))
+        function sum (menu, a, b) {
+            switch (menu) {
+                case "Add":
+                    return (a + b)
+                    break;
+                case "Sub":
+                    return (a - b)
+                    break;
+                case "Mul":
+                    return (a * b)
+                    break;
+                default:
+                    return ("Invalid")
+                    break;
+            }
+        }
+        let func = sum (menu, a, b)
+        alert(func)
+
+        //Sum of even and odd
+        let n = Number(prompt("Enter a number"))
+        const x = 2
+        let e = 0;
+        let o = 0;
+        for(let i = 1;i<=n;i++){
+            if(i%x==0){
+                e+=i;
+            }
+            else{
+                o+=i;
+            }
+        }
+        alert("Even sum ="+e);
+        alert("Odd sum = "+o);
+
+        //Exit Confirmation
+        let x = confirm("Do you want to exit?")
+        if(x==true){
+            alert("Exit")
+        }
+        else{
+            alert("Continue")
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Welcome😊</h1>
+</body>
+
+</html>
