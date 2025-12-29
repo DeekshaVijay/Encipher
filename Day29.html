@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1.Welcome Based on time
+        let t = prompt("Enter the time");
+        function welcome(t){
+            if(t<=12.00 && t>0.00){
+                return ("Good Morning");
+            }
+            else if(t>=12.01 && t<=15.00){
+                return("Good Afternoon");
+            }
+            else if(t>=15.01 && t<=18.00){
+                return ("Good Evening");
+            }
+            else if(t>=18.01 && t<=24.00){
+                return ("Good Night");
+            }
+            else{
+                return ("Invalid");
+            }
+        }
+        let w = welcome(t);
+        alert(w);
+
+       // 2.Pos,Neg,Zero
+        let n = Number(prompt("Enter a number"));
+        if(n>0){
+            alert("Positive");
+        }
+        else if(n<0){
+            alert("Negative");
+        }
+        else{
+            alert("Zero");
+        }
+
+
+       // 3.Simple Attendance Checker
+        let tclass = Number(prompt("Enter total classes"));
+        let aclass = Number(prompt("Enter attended classes"));
+        function percent(tclass, aclass){
+            return (aclass*100)/tclass;
+
+        }
+        let a = percent(tclass,aclass);
+        if(a>=75){
+            alert("Ur Eligible");
+        }
+        else{
+            alert("Ur not eligible");
+        }
+
+
+       // 4.Largest number in a range
+        let n = Number(prompt("Enter the limit"));
+        let max = 0;
+        for(let i = 1;i<=n;i++){
+            let m = Number(prompt("Enter the number"));
+            if(m>max){
+                max = m;
+            }
+        }
+        alert(max);
+
+        //5.Temperature converter
+        let choice = prompt("c f");
+        let temp = Number(prompt("Enter the temperture"));
+        function conversion(temp,choice){
+            switch(choice){
+                case "c":
+                    return ((temp-32)/(1.8));
+                    break;
+                case "f":
+                    return ((temp*1.8)+32);
+                    break;
+                default:
+                    return ("Invalid");
+                    break;
+            }
+        }
+        let t = conversion(temp ,choice)
+        alert(t)
+
+        //6.vowel count
+        let x = prompt("Enter the string")
+        let c = 0;
+        for(let i = 0;i<x.length;i++){
+            if(x[i]=='a'||x[i]=='e'||x[i]=='i'||x[i]=='o'||x[i]=='u'||x[i]=='A'||x[i]=='E'||x[i]=='I'||x[i]=='O'||x[i]=='U'){
+                c++;
+            }
+        }
+        alert(c);
+
+        //7.Number Pattern
+        let x = Number(prompt("Enter a number"))
+        for(let i = 1 ;i<=x;i++){
+            let r = "";
+            for(let j = 1;j<=i;j++){
+                r+=j+" ";
+            }
+            console.log(r);
+        }
+
+
+        //8.Smallest Number
+        let a = Number(prompt("Enter a number1"));
+        let b = Number(prompt("Enter a number2"));
+        let c = Number(prompt("Enter a number3"));
+        if(a<b && a<c){
+            alert(a)
+        }
+        else if(b<a && b<c){
+            alert(b)
+        }
+        else{
+            alert(c)
+        }
+
+       // 9.Bill Amount Calculator
+        let i = Number(prompt("Enter the item"));
+        let p = Number(prompt("Enter the price"));
+        alert("Total amount"+" " +i*p);
+
+        //10.Leap year
+        let y = Number(prompt("Enter the year"))
+        if((y%4==0 && y%100!=0)||y%400==0){
+            alert("It is leap year");
+        }
+        else{
+            alert("Not a leap year");
+        }
+
+        //11.odd count
+        let n = Number(prompt("Enter a num"));
+        let c = 0;
+        function odd(n) {
+            for (let i = 0; i <= n; i++) {
+                if (i % 2 != 0) {
+                    c++;
+                }
+            }
+            return c;
+        }
+        let f = odd(n);
+        alert(f);
+
+
+        //12.Palindrome
+        let x = prompt("Enter a string");
+        let y = "";
+        function palin(x, y) {
+            for (let i = x.length-1; i >= 0; i--) {
+                y += x[i];
+            }
+            // alert(y)
+            if (x === y) {
+                alert("It is Palindrome");
+            }
+            else {
+                alert("Not a Palindrome");
+            }
+        }
+        palin(x, y)
+
+
+        //13.Power
+        let b = Number(prompt("Enter a base"));
+        let e = Number(prompt("Enter a exponent"));
+        let p = 1;
+        for(let i = 1 ;i<=e;i++){
+            p*=b
+        }
+        alert(p);
+
+        //14.Student Result System
+        let m1 = Number(prompt("Enter a mark1"));
+        let m2 = Number(prompt("Enter a mark2"));
+        let m3 = Number(prompt("Enter a mark3"));
+        let total = m1+m2+m3;
+        let avg = (total*100)/300;
+        if(avg>=50){
+            alert("Pass")
+        }
+        else{
+            alert("Fail");
+        }
+
+        //15.Currency Converter
+        let r = Number(prompt("Enter the amount"));
+        let d = 0.011;
+        alert((r*d).toFixed(2));
+
+        //16.Sum of digits
+        let num = Number(prompt("Enter a num"));
+        let s = 0;
+        while(num!=0){
+            s+=(num%10);
+            num = Math.floor(num/10);
+        }
+        alert(s);
+
+        //17.Simple Menu
+        let c;
+        do{
+            c = prompt("1 2 3");
+            if(c==1){
+                alert("Login");
+            }
+            else if(c==2){
+                alert("Stay");
+            }
+        }while(c!=3);
+
+        //18.Average of n numbers
+        let n = Number(prompt("Enter a number"))
+        let s = 0;
+        for(let i = 1;i<=n;i++){
+            s+=i;
+        }
+        alert(s/n)
+
+        //19.Check divisibility
+        let a = Number(prompt("Enter number"));
+        if(a%3==0 && a%5==0){
+            alert("It is divisible by both 3 and 5");
+        }
+        else if(a%3==0){
+            alert("It is divisible by 3 only"); 
+        }
+        else if(a%5==0){
+            alert("It is divisible by 5 only"); 
+        }
+        else{
+            alert("Invalid");
+        }
+
+        //20.Login Attempt Counter
+        let a = 3;
+        let name = "deeksha";
+        while(a!=0){
+            let pass = prompt("enter password");
+            if(name === pass){
+                alert("Success");
+                break;
+            }
+            else{
+                alert("Invalid") 
+            }
+            a--;
+        }
+        if(a==0){
+            alert("Account Locked")
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
