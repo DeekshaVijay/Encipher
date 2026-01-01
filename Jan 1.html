@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.Username Formatter
+        let name = prompt("Enter your name");
+        alert(name.trim().toLowerCase());
+
+       // 2.Email Validation
+        let mail = prompt("Enter ur mail");
+        if(mail.includes('@') && mail.includes('.')){
+            alert("Valid");
+        }
+        else{
+            alert("Invalid");
+        }
+
+        //3.character count
+        let x = prompt("Enter a sentence");
+        alert(x.split(" ").join("").length);
+
+        //4.Word counter
+        let a = prompt("Enter a para");
+        alert(a.split(" ").length);
+
+        //5.First and last character finder
+        let a = prompt("Enter a string");
+        let l = a.length;
+        alert("First: "+a.charAt(0));
+        alert("Last: "+a.charAt(l - 1));
+
+        //6.Replace Word in sentence
+        let m = prompt("Enter a sentence");
+        let n = prompt("Enter a word");
+        let r = prompt("Replace word");
+        alert(m.replace(n,r));
+        alert(m.replaceAll(n,r));
+
+        //7.string Length Validator
+        let a = prompt("Enter a word");
+        let l = a.length;
+        if(l<5 || l>20){
+            alert("Error");
+        }
+        else{
+            alert("Accepted");
+        }
+
+        //8.Count Uppercase Letter
+        let a = prompt("Enter a string");
+        let c = 0;
+        for(let i = 0;i<a.length;i++){
+            if(a[i] == a[i].toUpperCase()){
+                c++;
+            }
+        }
+        alert(c);
+
+        //9.Remove special characters
+        let s = prompt("Enter a string");
+        alert(s.replace(/[^a-z A-Z 0-9]/g,""));
+
+        //10.check startswith/Endswith
+        let a = prompt("Enter a string");
+        alert(a.startsWith("J"));
+        alert(a.endsWith("t"));
+
+       // 11.Longest word
+        let a = prompt("Enter a sentence");
+        a = a.split(" ");
+        let c = 0;
+        let lw = "";
+        for(let i = 0;i<a.length;i++){
+            if(a[i].length>c){
+                c = a[i].length;
+                lw = a[i];
+            }
+        }
+        alert(lw);
+
+        //13.Mask Mobile number
+        let num = prompt("Enter mobile number");
+        alert("*".repeat(num.length-4)+num.slice(-4));
+
+        //14.Find repeated characters
+        let m = prompt("Enter a string");
+        let r = "";
+        for(let i = 0;i<m.length;i++){
+            if(m.indexOf(m[i])!=m.lastIndexOf(m[i]) && !r.includes(m[i])){
+                r+=m[i]+" ";
+            }
+        }
+        alert(r);
+
+        //15.Count of vowels and consonants
+        let x = prompt("Enter a string");
+        let c = 0;
+        let v = 0;
+        for(let i = 0;i<x.length;i++){
+            if("aeiouAEIOU".includes(x[i])){
+                v++;
+            }
+            else{
+                c++;
+            }
+        }
+        alert("Vowels: "+v+" "+"Consonants: "+c);
+
+       // 16.Remove duplicate words
+        let str = prompt("Enter a sentence");
+        str = str.split(" ");
+        let rw = "";
+        for(let i = 0;i<str.length;i++){
+            if(!str[i].includes(rw)){
+                rw+=str[i]+" ";
+            }
+        }
+        alert(rw);
+
+        //18.Trim an compare
+        let x = prompt("Enter string1");
+        let y = prompt("Enter string2");
+        alert(x.trim()==y.trim() ? "Equal":"Not Equal");
+
+        //19.Extract numbers from string
+        let x = prompt("Enter a string");
+        let y = "";
+        for(let i = 0;i<x.length;i++){
+            if(x[i] >= "0" && x[i] <="9"){
+                y+=x[i];
+            }
+        }
+        alert(y);
+
+        //20.Password Strength checker
+        let p = prompt("Enter password");
+        let n = 0;
+        let u = 0;
+        if(p.length>=8){
+            for(let i = 0 ;i<p.length;i++){
+                if(p[i]>="A" && p[i]<="Z"){
+                    u++;
+                }
+                if(p[i]>="0" && p[i]<="9"){
+                    n++;
+                }
+            }
+            if(u>0 && n>0){
+                alert("Valid");
+            }
+            else{
+                alert("Invalid");
+            }
+        }
+        else{
+            alert("Invalid");
+        }
+        
+    </script>
+</body>
+</html>
