@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="b">Click Here</button><hr>
+
+    <button id="sb" style="margin: 10px;">Show</button><br>
+    <button id="hb" style="margin: 10px;">Hide</button>
+    <p id="p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti ducimus quo, voluptatem ea, esse animi .</p>
+    <hr>
+    <div id="d">Double Click</div><hr>
+
+    <p id="font">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p><hr>
+
+    <h3 style="border: 1px solid black;text-align: center;" id="box">Color change</h3><hr>
+
+    <button id="tool">Hide Me</button>
+    <p id="tip">This is hide content</p><hr>
+
+    <div id="div" style="background-color: bisque;text-align: center; font-size: 25px;">Hello</div><hr>
+
+    <div style="border: 1px solid transparent; height: 50px;" id="bcolor"></div><hr>
+
+
+    <input type="text" id="input" placeholder="Type here"><hr>
+
+    <form id="form">
+        <button>Submit</button>
+    </form><hr>
+
+    <form id="f">
+        <input type="text" id="ip">
+        <button id="btn">Submit</button>
+    </form><hr>
+
+    <select id="select">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select><hr>
+
+    <select id="select">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+    </select><hr>
+
+    <input type="text" id="fb" placeholder="Click Here">
+    <p id="p" style="display: none;">Hello Everyone</p><hr>
+
+    <input type="text" id="input"><hr>
+
+    <input type="text" id="input">
+    <button id="c">0</button><hr>
+
+    <input type="text" id="input">
+    <p id="op"></p><hr>
+
+    <button style="margin: 10px;">Button 1</button>
+    <button style="margin: 10px;">Button 2</button>
+    <button style="margin: 10px;">Button 3</button>
+    <p id="o"></p><hr>
+
+    <div id="parent">Parent
+        <button id="child">Child</button>
+    </div> <hr>
+
+    <div id="p">Parent
+        <button id="c">Child</button>
+    </div>
+
+</body>
+<script>
+
+    //1.
+    let a = document.getElementById("b");
+    a.addEventListener('click' , (event)=>{
+        alert("Clicked");
+    });
+
+    //2.
+    window.addEventListener('load' , ()=>{
+        console.log("Page Loaded");
+    });
+    
+
+    //3.
+    document.body.style.backgroundColor = "lightblue";
+
+    //4.
+    document.getElementById("sb").addEventListener("click",()=>{
+        document.getElementById("p").style.display="block";
+    });
+    document.getElementById("hb").addEventListener("click",()=>{
+        document.getElementById("p").style.display="none";
+    });
+
+    //5.
+    document.getElementById("d").addEventListener("dblclick", ()=>{
+        document.getElementById("d").textContent = "Text Changed"
+    });
+
+    //6.
+    document.getElementById("font").addEventListener("dblclick", ()=>{
+        document.getElementById("font").style.fontSize="30px";
+    });
+
+    //7.
+    document.getElementById("box").addEventListener("mouseenter", ()=>{
+        document.getElementById("box").style.backgroundColor = "lightgreen";
+    });
+    document.getElementById("box").addEventListener("mouseleave", ()=>{
+        document.getElementById("box").style.backgroundColor = "white";
+    });
+
+    //8.
+    document.getElementById("tool").addEventListener("mouseover",()=>{
+        document.getElementById("tip").style.display = "block"
+    });
+     document.getElementById("tool").addEventListener("mouseout",()=>{
+        document.getElementById("tip").style.display = "none"
+    });
+
+    //9.
+    document.getElementById("div").addEventListener("mousemove" , (e)=>{
+        console.log(`X: ${e.clientX} , Y:${e.clientY}`);
+        
+    });
+
+    //10.
+    document.getElementById("bcolor").addEventListener("mousemove", (e)=>{
+        e.target.style.backgroundColor = `rgb(${e.clientX % 255} , ${e.clientY % 255}, 150)`;
+    });
+    
+    //11.
+    document.addEventListener("contextmenu", (event) =>{
+        event.preventDefault();
+    });
+
+    //12.
+    document.addEventListener("contextmenu", (event) =>{
+        event.preventDefault();
+        alert("Right click disabled"); 
+    });
+
+    //13.
+    document.addEventListener('keydown' , (event)=>{
+        console.log(event.key);
+    });
+
+    //14.
+    document.getElementById("input").addEventListener("keyup", ()=>{
+        document.getElementById('input').style.color = "red";
+    });
+
+    //15.
+    document.getElementById("form").addEventListener("submit",(e)=>{
+        e.preventDefault();
+    });
+
+    //16.
+    document.getElementById("f").addEventListener("submit", (e)=>{
+        const i = document.getElementById("ip").value;
+        if(i === ""){
+            e.preventDefault();
+            alert("Enter Something");
+        } 
+    });
+
+    //17.
+    document.getElementById("select").addEventListener("change", (e)=>{
+        console.log("Selected "+select.value);
+    });
+
+    //18.
+    document.getElementById("select").addEventListener("change", (e)=>{
+        document.body.style.backgroundColor = e.target.value;
+    });
+
+    //19.
+    document.getElementById("fb").addEventListener("focus", (e)=>{
+        document.getElementById("fb").style.backgroundColor = 'lightgreen';
+    });
+    document.getElementById("fb").addEventListener("blur", (e)=>{
+        document.getElementById("fb").style.backgroundColor = 'white';
+    });
+
+    //20.
+    document.getElementById("fb").addEventListener("focus", (e)=>{
+        document.getElementById("p").style.display = "block";
+    });
+    document.getElementById("fb").addEventListener("blur", (e)=>{
+        document.getElementById("p").style.display = "none";
+    });
+
+    //21.
+    input.addEventListener("input", (e)=>{
+        console.log(e.target.value); 
+    })
+
+    //22.
+    document.getElementById("input").addEventListener("input", (e)=>{
+        document.getElementById("c").textContent = e.target.value.length;
+    });
+
+    //23.
+    document.getElementById("input").addEventListener("input", (e)=>{
+        document.getElementById("op").textContent = e.type +" "+ e.target.tagName;
+    });
+
+    //24.
+    document.addEventListener("click", (e)=>{
+        if(e.target.tagName==="BUTTON"){
+            document.getElementById("o").textContent = "Clicked "+e.target.textContent;
+        }
+    });
+
+    //25.
+    document.getElementById("parent").addEventListener("click" , (e)=>{
+        console.log("Parent clicked");
+    });
+    document.getElementById("child").addEventListener("click" , (e)=>{
+        console.log("Child clicked");
+    });
+
+    //26.
+    document.getElementById("p").addEventListener("click" , ()=>{
+        alert("Parent");
+    });
+     document.getElementById("c").addEventListener("click" , ()=>{
+        alert("Child");
+    });
+
+    //27,28
+    document.getElementById("p").addEventListener("click", (e)=>{
+        console.log('Parent Clicked');
+    });
+    document.getElementById("c").addEventListener("click", (e)=>{
+        e.stopPropagation();
+        console.log('Child Clicked');
+    });
+</script>
+</html>
