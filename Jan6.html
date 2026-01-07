@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1 -->
+    <button id="btn">Click</button>
+    <hr>
+
+    <!-- 2 -->
+    <button id="bc">Click Here</button>
+    <hr>
+
+    <!-- 3 -->
+    <button id="time">Time</button>
+    <hr>
+
+    <!-- 4 -->
+    <button id="c">Count</button>
+    <p id="count">0</p>
+    <hr>
+
+    <!-- 5 -->
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <hr>
+
+    <!-- 6 -->
+    <button onclick="cancel()">Cancel</button>
+    <p id="alert"></p>
+    <hr>
+
+    <!-- 8 -->
+    <button onclick="Start()">START</button>
+    <button onclick="Stop()">STOP</button>
+    <p id="cnt">0</p>
+
+    <!-- 9 -->
+    <ul id="List">
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+
+    <!-- 10 -->
+     <p id="p"></p>
+
+     <!-- 11 -->
+      <div id="s"></div>
+
+      <!-- 12 -->
+       <button id="bt">Back to top</button>
+
+</body>
+<script>
+    //1.
+    document.getElementById("btn").addEventListener("click", () => {
+        setTimeout(() => {
+            alert("Hello after 3 seconds")
+        }, 3000)
+    });
+
+    //2.
+    document.getElementById("bc").addEventListener("click", () => {
+        setTimeout(() => {
+            document.body.style.backgroundColor = 'lightblue';
+        }, 5000)
+    });
+
+    //3.
+    document.getElementById("time").addEventListener("click", () => {
+        setInterval(() => {
+            console.log(new Date().toLocaleTimeString());
+        }, 1000)
+    });
+
+    //4.
+    let Count = 0;
+    document.getElementById("c").addEventListener("click", () => {
+        setInterval(() => {
+            Count++;
+            document.getElementById("count").innerText = Count;
+        }, 1000);
+    });
+
+    //5.
+    let a;
+    function start() {
+        a = setTimeout(() => {
+            alert("10 Seconds");
+        }, 10000)
+    }
+    function stop() {
+        clearTimeout(a);
+        alert("Stopped");
+    }
+
+    //6.
+    let t = setTimeout(() => {
+        document.getElementById("alert").innerText = "Hello!!";
+    }, 5000);
+    function cancel() {
+        clearTimeout(t);
+    }
+
+    //7.
+    let count = 1;
+    let timer = setInterval(() => {
+        console.log(count);
+        count++;
+    }, 1000);
+    setTimeout(() => {
+        clearInterval(timer);
+    }, 10000);
+
+    //8.
+    let A;
+    function Start() {
+        let count = 0;
+        A = setInterval(() => {
+            count++;
+            document.getElementById("cnt").innerText = count;
+        }, 1000);
+    }
+    function Stop() {
+        clearInterval(A);
+    }
+
+    //9.
+    document.getElementById("List").addEventListener("click", (e)=>{
+        if(e.target.tagName ==="LI"){
+            e.target.style.backgroundColor = "lightblue";
+        }
+    });
+
+    //10.
+    window.addEventListener("resize", ()=>{
+      if(window.innerWidth < 600){
+        document.getElementById("p").innerText = "Mobile view";
+      }
+      else{
+        document.getElementById("p").innerText = "Desktop view";
+      }
+    });
+
+    //11.
+    window.addEventListener("resize",()=>{
+        document.getElementById("s").innerText = innerWidth + innerHeight;
+    });
+
+    //12.
+    window.addEventListener("scroll", ()=>{
+        bt.style.display = window.scrollY > 500 ? "block" : "none";  
+    });
+
+    //13.
+    document.addEventListener("DOMContentLoaded",(e)=>{
+        console.log("DOM fully loaded");
+    });
+
+    //14.
+    window.addEventListener("load", (e)=>{
+        console.log("Page fully loaded");    
+    })
+
+
+
+
+</script>
+
+</html>
