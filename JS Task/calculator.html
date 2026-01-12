@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+</head>
+
+<body class="body">
+    <div class="div">
+        <input id="input" type="text" disabled>
+        <div class="div1">
+            <div class="class2">
+                <button class="p1" onclick="calculate()">+</button>
+                <button class="p1" onclick="calculate()">&#8722;</button>
+                <button class="p1" onclick="calculate()">&times;</button>
+                <button class="p1" onclick="calculate()">&divide;</button>
+            </div>
+            <div class="class2">
+                <button class="p" onclick="display()">7</button>
+                <button class="p" onclick="display()">8</button>
+                <button class="p" onclick="display()">9</button>
+                <button class="p" onclick="display()">4</button>
+            </div>
+            <div class="class2">
+                <button class="p" onclick="display()">5</button>
+                <button class="p" onclick="display()">6</button>
+                <button class="p" onclick="display()">1</button>
+                <button class="p" onclick="display()">2</button>
+            </div>
+            <div class="class2">
+                <button class="p" onclick="display()">3</button>
+                <button class="p" onclick="display()">0</button>
+                <button class="p" id="dot" onclick="display()">.</button>
+                <button class="p2" onclick="clearDisplay()">C</button>
+            </div>
+            <div>
+                <button class="p3" onclick="compute()">&#61;</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let cvalue = "";
+    let pvalue = "";
+    let op = null;
+
+    function display() {
+        const value = event.target.innerText;
+        cvalue += value;
+        document.getElementById("input").value = pvalue + (op ?? "") + cvalue;
+    }
+    function calculate() {
+        const operator = event.target.innerText;
+        if (cvalue === "" && pvalue==="") return;
+        if(pvalue!=="" && cvalue!==""){
+            compute();
+        }
+        op = operator;
+        pvalue = cvalue || pvalue;
+        cvalue = "";
+        document.getElementById("input").value = pvalue + op;
+    }
+    function compute() {
+        if (pvalue === "" || cvalue === "" || op === null) return;
+        let result;
+        switch (op) {
+            case "+":
+                result = Number(pvalue) + Number(cvalue);
+                break;
+            case "–":
+                result = Number(pvalue) - Number(cvalue);
+                break;
+            case "×":
+                result = Number(pvalue) * Number(cvalue);
+                break;
+            case "÷":
+                result = Number(pvalue) / Number(cvalue);
+                break;
+        }
+        pvalue = result;
+        cvalue = "";
+        op = null;
+        document.getElementById("input").value = result;
+    }
+    function clearDisplay() {
+        cvalue = "";
+        pvalue = "";
+        op = null;
+        document.getElementById("input").value = "";
+    }
+</script>
+</html>

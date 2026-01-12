@@ -1,0 +1,119 @@
+.body{
+    background-color: rgb(28, 107, 234);
+    padding-left: 35%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+.div{
+    border: 2px solid white;
+    background-color: white;
+    width: 350px;
+    height: 520px;
+    border-radius: 10px;
+    padding: 10px;
+}
+#input{
+    border: 2px solid rgb(245, 241, 235);
+    background:linear-gradient( #f5f1eb, #e4ddd9) ;
+    width: 290px;
+    height: 50px;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+
+}
+.p{
+    font-size: 50px;
+    font-weight: 600;
+    text-align: right;
+    margin: 0px;
+}
+.div1{
+    margin: 20px;
+    margin-top: 0px;
+}
+.class2{
+    display: flex;
+    justify-content: space-between;
+}
+/* .box{
+    border: 2px solid orange;
+    background-color: orange;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+} */
+
+.p1{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 0%;
+    background-color: orange;
+    border: 1px solid transparent;
+    margin: 10px 5px;
+    border-radius:10px;
+    padding: 10px 20px;
+}
+#dot{
+    padding: 10px 25px;
+}
+/* .box1{
+    border: 2px solid rgb(159, 220, 229);
+    background-color: rgb(159, 220, 229);
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+} */
+.p2{
+    border: 2px solid rgb(234, 76, 51);
+    background-color: rgb(234, 76, 51);
+    /* width: 40px;
+    height: 40px; */
+    border-radius: 15px;
+    margin: 10px 5px;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 9px 18px;
+}
+.p{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    margin: 10px 5px;
+    background-color: rgb(159,220,229);
+    border: 1px solid transparent;
+    border-radius:10px;
+    padding: 10px 20px;
+    color: black;
+}
+/* .box3{
+    border: 2px solid rgb(39, 242, 174);
+    background-color: rgb(39, 242, 174);
+    width: 130px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+} */
+.p3{
+    background-color: rgb(39, 242, 174);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 10px 60px;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    margin: 10px px;
+}
+#input{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
