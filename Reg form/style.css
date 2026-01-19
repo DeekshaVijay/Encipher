@@ -1,0 +1,71 @@
+body{
+    background:url("https://t4.ftcdn.net/jpg/02/97/12/13/360_F_297121362_XoF6yXKmG6J0j6g1ZjbYlS8UkHJ1ZRBw.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    color: white;
+    text-transform: uppercase;
+}
+
+form{
+    background-color: white;
+    padding: 25px 30px;
+    width: 500px; 
+    border-radius: 10px;
+}
+label{
+    font-size: 25px;
+    font-weight: 700;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+input:hover{
+    background-color: aliceblue;
+}
+textarea:hover{
+    background-color: aliceblue;
+}
+textarea{
+    resize: none;
+    height: 70px;
+}
+.skill{
+    display: flex;
+    gap: 10px;
+}
+.small{
+    font-size: 15px;
+    font-weight: 300;
+}
+input[type="checkbox"], input[type="radio"] {
+    width: auto;
+}
+
+button{
+    background-color: black;
+    color: white;
+    margin-left: 80%;
+    margin-top: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(77, 75, 75);
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>User Details</h1>
+    <form id="form">
+        <label>Name<br>
+            <input type="text" id="name"><br>
+        </label>
+
+        <label>Email<br>
+            <input type="email" id="mail"><br>
+        </label>
+
+        <label>Password<br>
+            <input type="password" id="password"><br>
+        </label>
+
+        <label> DOB <br>
+            <input type="date" id="date"><br>
+        </label>
+
+        <label>Skills<br>
+            <div class="skill">
+            <label><input type="checkbox" value="HTML"><span class="small">HTML</span></label>
+            <label><input type="checkbox" value="CSS"><span class="small">CSS</span></label>
+            <label><input type="checkbox" value="JS"><span class="small">JS</span></label>
+            <label><input type="checkbox" value="JAVA"><span class="small">JAVA</span></label>
+            <label><input type="checkbox" value="C"><span class="small">C</span></label>
+            <label><input type="checkbox" value="Python"><span class="small">Python</span></label><br>
+            </div>
+        </label>
+
+        <label>Gender<br>
+            <input type="radio" name="gender"><span class="small">Male</span>
+            <input type="radio" name="gender"><span class="small">Female</span>
+            <input type="radio" name="gender"><span class="small">Others</span><br>
+        </label>
+        
+        <label>Country<br>
+            <select id="option">
+                <option>India</option>
+                <option>US</option>
+                <option>UK</option>
+                <option>Germany</option>
+                <option>UAE</option>
+            </select><br>
+        </label>
+
+        <label>Address<br>
+            <textarea></textarea><br>
+        </label>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script>
+    const form = document.getElementById("form");
+    let editIndex = localStorage.getItem("editIndex");
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    if(editIndex!==null){
+        let u = users[editIndex];
+        document.getElementById("name").value = u.name;
+        document.getElementById("mail").value = u.email;
+        document.getElementById("password").value = u.password;
+        document.getElementById("date").value = u.date;
+        document.getElementById("option").value = u.country;
+        document.querySelector("textarea").value = u.address;
+        
+        document.querySelectorAll("input[type=checkbox]").forEach(cb => {
+            if(u.skills.includes(cb.nextElementSibling.innerText)) cb.checked = true;
+        });
+        document.querySelectorAll("input[name = gender]").forEach(rb => {
+            if(rb.nextElementSibling.innerText === u.gender) rb.checked = true;
+        });
+        localStorage.removeItem("editIndex");
+    }
+
+    form.onsubmit = event =>{
+        event.preventDefault();
+
+        let n = document.getElementById("name").value.trim();
+        let e=document.getElementById("mail").value.trim();
+        let p = document.getElementById("password").value.trim();
+        let u = /[A-Z]+[a-z]{5,}/;
+        let m = /[a-zA-Z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3} /;
+        let P = /[A-Z]+[a-z]{5,}[@\.\-$][0-9]{1,}/;
+        if(n===""||p===""){
+            alert("Enter valid details");
+            return;
+        }
+        if(n.length<8 || p.length <10){
+            alert("Invalid name or password length");
+            return;
+        }
+        if(!P.test(p)){
+            alert("Enter valid password");
+            return;
+        }
+
+        let user = {
+            name:n,
+            email:e,
+            password :p,
+            date : document.getElementById("date").value,
+            skills : Array.from(document.querySelectorAll("input[type=checkbox]:checked")).map(x => x.nextElementSibling.innerText).join(", "),
+            gender : document.querySelector("input[name = gender]:checked")?.nextElementSibling.innerText || "",
+            country:document.getElementById("option").value,
+            address:document.querySelector("textarea").value
+        };
+        if(editIndex !== null){
+            users[editIndex] = user;
+            localStorage.removeItem("editIndex");
+        }
+        else{
+            users.push(user);
+        }
+        localStorage.setItem("users", JSON.stringify(users));
+        location.href = "table.html"
+    }
+</script>
+
+</html>
