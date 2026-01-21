@@ -6,6 +6,7 @@ import Title from './component/Title';
 import Button from './component/Button';
 import Log from './component/Log';
 import Userdata from './component/Userdata';
+import Reuse from './component/Reuse';
 function App() {
   const userdata = {
     name:"Deeksha",
@@ -13,6 +14,9 @@ function App() {
   }
   return (
     <div>
+      <Reuse name = "Shree" />
+      <Reuse name = "Vaishu" />
+      <Reuse name = "Deepika" />
       <Userdata user = {userdata}/>
       <Log  isLog = {true} />
       {/* <Log  isLog = {false} /> */}
