@@ -1,0 +1,52 @@
+.order-page {
+  min-height: 80vh;
+  background: radial-gradient(rgba(247, 197, 164, 0.5), rgba(243, 242, 242, 0.5)), url("https://img.freepik.com/premium-vector/seamless-pattern-with-cakes-desserts-beige-background-vector-illustration_345238-3739.jpg?semt=ais_hybrid&w=740&q=80");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.order-page h2 {
+  color:#e20972;
+  margin-bottom: 25px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.order-page input {
+  width: 320px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.order-page input:focus {
+  border-color: #d81b60;
+  box-shadow: 0 0 5px rgba(216, 27, 96, 0.3);
+}
+
+.order-page button {
+  margin-top: 10px;
+  width: 320px;
+  padding: 12px;
+  background-color: #d81b60;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-page button:hover {
+  background-color: #ad1457;
+  transform: translateY(-2px);
+}

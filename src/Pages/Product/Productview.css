@@ -1,0 +1,83 @@
+.p-page {
+    padding: 30px 60px;
+}
+
+.p-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 10px;
+    
+}
+
+.p-card:hover{
+    border: 2px solid black;
+}
+.p-card img {
+    width: 260px;
+    height: auto;
+    object-fit: cover;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.p-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-info h2 {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.p-info h3 {
+    font-size: 20px;
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+.p-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.p-actions button {
+    padding: 8px 16px;
+    background-color: white;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    color: black;
+    border-radius: 0px;
+}
+
+.p-actions button:hover {
+    background-color: #333;
+    color: white;
+}
+
+
+#btn{
+    background-color: #e91e63;
+}
+@media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product-card img {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+

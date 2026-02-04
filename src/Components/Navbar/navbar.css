@@ -1,0 +1,70 @@
+.navbar {
+    background: #da766e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 14px;          
+    box-shadow: 0 1px 6px rgba(237, 176, 176, 0.08);
+    position: sticky;
+    border-radius: 8px;       
+}
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo {
+    width: 80px;             
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.brand h1{
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;                 
+    margin: 0;
+    padding: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 25px;        
+    color: black;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4d6d;
+}
+
+
+.login {
+    color: black;
+}
+
+.loginicon {
+    font-size: 13px;         
+}
+
+.nav {
+    font-weight: 600;         
+}
+
+.log{
+    text-decoration: none;
+    font-size: 25px;        
+    color: black;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+.log:hover{
+    color: #ff4d6d;
+}
